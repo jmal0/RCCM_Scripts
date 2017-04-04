@@ -12,7 +12,7 @@ function [dx, dy] = get_offset(filepath, search_zone, teach_fft, h)
 usfac = 100; % Upsample factor (# of pixel divisions to use)
 
 % Read new image and save as array of grayscale values on [0, 1]
-img = rgb2gray(im2double(imread(filepath)));
+img = im2double(imread(filepath));
 img_crop = imcrop(img, search_zone);
 
 figure(h);

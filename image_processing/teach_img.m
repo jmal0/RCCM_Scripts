@@ -10,10 +10,11 @@ if nargin == 1
 end
 
 % Load image
-img = rgb2gray(im2double(imread(filename)));
+img = im2double(imread(filename));
 
 % Have user select region in which to look for teach image
 disp('Select search zone');
+figure;
 [search_img, search_zone] = imcrop(img);
 
 % Have user select region within image to search for

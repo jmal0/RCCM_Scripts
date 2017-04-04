@@ -23,6 +23,8 @@ for i = 2:numel(files)
     rect_new = teach_zone - [dxi, dyi, 0, 0];
     rectangle('Position', rect_new);
     
+    print(sprintf('%d', i), '-dpng');
+    
     % Save offsets
     dy(i) = dyi;
     dx(i) = dxi;
