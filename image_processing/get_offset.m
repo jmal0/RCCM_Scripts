@@ -13,6 +13,9 @@ usfac = 100; % Upsample factor (# of pixel divisions to use)
 
 % Read new image and save as array of grayscale values on [0, 1]
 img = im2double(imread(filepath));
+if (size(img, 3) > 1)
+    img = rgb2gray(img);
+end
 img_crop = imcrop(img, search_zone);
 
 figure(h);
